@@ -6,10 +6,5 @@ phases:
       java: openjdk11
   build:
     commands:
-      - wget https://downloads.apache.org/tomcat/tomcat-9/v9.0.50/bin/apache-tomcat-9.0.50.tar.gz
-      - tar -xf apache-tomcat-9.0.50.tar.gz
-      - mv apache-tomcat-9.0.50 /opt/tomcat
-      - chmod +x /opt/tomcat/bin/*.sh
-  post_build:
-    commands:
-      - /opt/tomcat/bin/startup.sh
+      - touch /home/ec2-user/codedeploy.txt
+
