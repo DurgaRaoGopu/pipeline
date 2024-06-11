@@ -1,6 +1,6 @@
 node {
     stage('final') {
-        sshagent(['your_ssh_credentials_id_here']) {
+        sshagent(['34.68.238.228']) {
             echo "Running this project in the 'delployment-testing-dr' server"
             sh '''
                 ssh -o StrictHostKeyChecking=no -l dr 34.132.181.85 '
@@ -11,7 +11,7 @@ node {
             '''
         }
         
-        sshagent(['your_ssh_credentials_id_here']) {
+        sshagent(['34.68.238.228']) {
             echo "Running this project in the 'delployment-testing-dr-2' server"
             sh '''
                 ssh -o StrictHostKeyChecking=no -l dr 34.46.212.6 '
