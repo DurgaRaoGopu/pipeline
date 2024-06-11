@@ -1,3 +1,3 @@
 touch $name
 mkdir renu_ramya
-echo "Hello Everyone+QQ!!"
+echo "Hello EveryoneQ!!"
