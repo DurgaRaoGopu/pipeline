@@ -4,9 +4,11 @@ node {
             echo "Running this project in the 'delployment-testing-dr' server"
             sh '''
                 ssh -o StrictHostKeyChecking=no -l dr 34.132.181.85 '
-                    touch GitHub
-                    ls
-                    pwd
+                    mkdir /home/dr/check_git
+                    cd /home/dr/check_git
+                    git clone https://github.com/DurgaRaoGopu/pipeline/
+                    cd pipeline
+                    sh shellscript.sh
                 '
             '''
         }
